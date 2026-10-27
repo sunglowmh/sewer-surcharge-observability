@@ -22,6 +22,14 @@ authors:
     affiliation: "Tongji University, Shanghai, China"
 license: MIT
 license-url: "https://github.com/sunglowmh/sewer-surcharge-observability/blob/main/LICENSE"
+doi: "10.5281/zenodo.23683482"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23683482"
+    description: "Version of record, v1.0.0"
+  - type: doi
+    value: "10.5281/zenodo.23683481"
+    description: "Concept DOI, always resolves to the newest version"
 repository-code: "https://github.com/sunglowmh/sewer-surcharge-observability"
 keywords:
   - sewer surcharge

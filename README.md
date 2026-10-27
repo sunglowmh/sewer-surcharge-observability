@@ -1,5 +1,10 @@
 # sewer-surcharge-observability
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23683481.svg)](https://doi.org/10.5281/zenodo.23683481)
+[![code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
+[![data: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey.svg)](outputs/LICENSE)
+[![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](requirements.txt)
+
 Reproducibility material for the manuscript *Where in-sewer level records stop
 decides whether surcharge duration can be estimated*.
 
@@ -91,7 +96,14 @@ records. One file is not ours to license: `outputs/figdata/basemap_osm.csv` is
 Machine-readable citation metadata is in `CITATION.cff`; cite the archived
 version of record:
 
-> [CITATION — the Zenodo DOI is inserted here at release; see CITATION.cff]
+> Zheng, M., Jiang, S., Liu, C., and Zhang, K. (2026). *Derived tables and code
+> for "Where in-sewer level records stop decides whether surcharge duration can
+> be estimated"*, v1.0.0. Zenodo.
+> https://doi.org/10.5281/zenodo.23683482
+
+The badge above carries the concept DOI (`10.5281/zenodo.23683481`), which always
+resolves to the newest version; the version DOI in the citation points at the
+frozen v1.0.0 archive.
 
 ## Scope
 
