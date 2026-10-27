@@ -1,0 +1,7 @@
+﻿level,label,value,parent
+0,floor readings,3308,
+1,rainfall-active period,132,floor readings
+1,outside gauge coverage,3176,floor readings
+2,Chifeng Road (site 01),3028,outside gauge coverage
+3,one 21-day block,2997,Chifeng Road (site 01)
+2,residual,148,outside gauge coverage

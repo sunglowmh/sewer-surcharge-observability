@@ -1,0 +1,13 @@
+No.,Site,thr (m),J (m),b_theta (m),Omega,Delta_obs (m),Readable,At floor,Below thr,Y,B,R,Criterion
+1,05 Ocean Building,1.50,1.60,0.10,**0.385**,-0.16,"4,133",0,**0**,0,0,5,not estimable
+2,11 Tongwen Building,1.10,1.20,0.10,**0.385**,-0.16,6,1,**0**,0,0,1,not estimable
+3,04 Pumped chamber (Int. Students Bldg 2),1.70,1.90,0.20,**0.769**,-0.06,"2,117",5,**0**,0,10,0,not estimable
+4,06 Aixiao Road,1.10,1.30,0.20,**0.769**,-0.06,90,1,**0**,0,0,4,not estimable
+5,11 Tongwen Building,1.40,1.60,0.20,**0.769**,-0.06,"3,232",54,**0**,0,70,0,not estimable
+6,05 Ocean Building,1.30,1.60,0.30,1.154,+0.04,"4,133",0,1,1,0,0,estimable
+7,11 Tongwen Building,0.90,1.20,0.30,1.154,+0.04,6,1,4,5,0,0,estimable
+8,01 Chifeng Road,2.40,2.70,0.30,1.154,+0.04,"4,092","3,054",34,62,29,0,estimable
+9,07 Medical Building,1.10,1.45,0.35,1.346,+0.09,305,23,3,3,0,0,estimable
+10,02 Structure Laboratory,1.60,1.95,0.35,1.346,+0.09,"4,573",56,26,79,31,0,estimable
+11,06 Aixiao Road,0.90,1.30,0.40,1.538,+0.14,90,1,2,3,0,0,estimable
+12,12 Continuing Education,1.00,1.40,0.40,1.538,+0.14,295,1,1,2,0,0,estimable

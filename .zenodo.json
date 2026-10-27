@@ -1,0 +1,17 @@
+{
+  "title": "Derived tables and code for 'Where in-sewer level records stop decides whether surcharge duration can be estimated'",
+  "description": "<p>Derived tables and plotting code behind every figure and table of the manuscript. The repository holds the derived quantities (the observability index, the criterion depth, the blindness classification, the duration ratios) and the short level extracts that two figures plot, together with the code that reads them. It does not hold the raw level archive, which remains with the network operator.</p><p>Code under <code>code/</code> is MIT. Data under <code>outputs/</code> is CC BY 4.0.</p>",
+  "upload_type": "software",
+  "license": {"id": "MIT"},
+  "access_right": "open",
+  "version": "1.0.0",
+  "creators": [
+    {"name": "Zheng, Maohui", "affiliation": "Tongji University, Shanghai, China"},
+    {"name": "Jiang, Simin", "affiliation": "Tongji University, Shanghai, China"},
+    {"name": "Liu, Chang", "affiliation": "Tongji University, Shanghai, China"},
+    {"name": "Zhang, Kaibo", "affiliation": "Tongji University, Shanghai, China"}
+  ],
+  "keywords": ["sewer surcharge", "urban drainage", "censored data", "observability", "water-level records", "sensor placement"],
+  "notes": "Data files under outputs/ are additionally licensed CC BY 4.0; see outputs/LICENSE. outputs/figdata/basemap_osm.csv is (c) OpenStreetMap contributors, ODbL 1.0.",
+  "related_identifiers": []
+}

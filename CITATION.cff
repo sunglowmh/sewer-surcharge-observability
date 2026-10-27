@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use the derived tables or the code, please cite the archived version of record."
+type: software
+title: "Derived tables and code for 'Where in-sewer level records stop decides whether surcharge duration can be estimated'"
+abstract: >-
+  Derived tables and plotting code behind every figure and table of the
+  manuscript on the observability of surcharge duration in in-sewer level
+  records. Raw level records are not included. Code is MIT; the CSV files under
+  outputs/ are CC BY 4.0.
+authors:
+  - family-names: "Zheng"
+    given-names: "Maohui"
+    affiliation: "Tongji University, Shanghai, China"
+  - family-names: "Jiang"
+    given-names: "Simin"
+    affiliation: "Tongji University, Shanghai, China"
+  - family-names: "Liu"
+    given-names: "Chang"
+    affiliation: "Tongji University, Shanghai, China"
+  - family-names: "Zhang"
+    given-names: "Kaibo"
+    affiliation: "Tongji University, Shanghai, China"
+license: MIT
+license-url: "https://github.com/sunglowmh/sewer-surcharge-observability/blob/main/LICENSE"
+repository-code: "https://github.com/sunglowmh/sewer-surcharge-observability"
+keywords:
+  - sewer surcharge
+  - urban drainage
+  - censored data
+  - observability
+  - water-level records
+version: "1.0.0"
+date-released: "2026-10-27"

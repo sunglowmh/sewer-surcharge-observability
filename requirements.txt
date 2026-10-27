@@ -1,0 +1,6 @@
+# Tested on 2026-10-27 with Python 3.13.14.  Every figure and table
+# regenerates from these three packages and the standard library; there is no
+# commercial software, no GIS stack and no compiled extension beyond numpy.
+numpy==2.4.4
+pandas==3.0.5
+matplotlib==3.11.1
