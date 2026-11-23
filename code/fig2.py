@@ -168,9 +168,8 @@ ax.text(lon_s + dlon / 2, lat_s - (EXT[3] - EXT[2]) * 0.018, "200 m",
         ha="center", va="top", fontsize=6.0, zorder=7,
         path_effects=[pe.withStroke(linewidth=1.8, foreground="white")])
 
-# Basemap attribution, inside the map itself.  Copernicus: "The copyright/
-# attribution and distribution licences of such maps must be visible in the
-# maps themselves", so this cannot live in the caption alone.
+# Basemap attribution, inside the map itself: the ODbL asks that attribution
+# be visible in the map, not only in the caption, so it is drawn on the canvas.
 ax.text(EXT[1] - (EXT[1] - EXT[0]) * 0.012,
         EXT[2] + (EXT[3] - EXT[2]) * 0.012,
         "\u00a9 OpenStreetMap contributors", ha="right", va="bottom",

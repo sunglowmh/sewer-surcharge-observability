@@ -5,8 +5,8 @@
 [![data: CC BY 4.0](https://img.shields.io/badge/data-CC--BY--4.0-lightgrey.svg)](outputs/LICENSE)
 [![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](requirements.txt)
 
-Reproducibility material for the manuscript *Where in-sewer level records stop
-decides whether surcharge duration can be estimated*.
+Reproducibility material for the manuscript *Setting the surcharge criterion
+below the sensor's near field: a design rule for in-sewer monitoring*.
 
 This repository holds **the derived tables from which every figure and table is
 drawn, and the code that draws them**. It does not hold the raw level archive:
@@ -22,11 +22,17 @@ pip install -r requirements.txt     # numpy, pandas, matplotlib
 python reproduce_all.py
 ```
 
-`reproduce_all.py` redraws Figs. 1–9, regenerates Tables 1–3, recomputes `Omega`
+`reproduce_all.py` redraws the nine figure files — the seven in the paper and the
+two in the Supporting Information — regenerates Tables 1–3, recomputes `Omega`
 from the published table, and then compares the six files it rewrote against the
 hashes in `SHA256SUMS`. A silent change in any derived number therefore shows up
 as `CHANGED`, not as a slightly different figure. Expected final line:
 `PASS  every figure redrawn, every table and quantity byte-identical`.
+
+**Script file names keep the original numbering, which is not the paper's.** Two
+figures moved to the Supporting Information, so the paper's Figs. 4–7 are drawn
+by `fig5.py`–`fig8.py`; the table below maps each paper item to the file that
+rebuilds it.
 
 Python 3.13 with three packages; no commercial software, no GIS stack. Each
 script resolves `ROOT` from its own location, so a clone runs where it is
@@ -39,18 +45,18 @@ subset, so their bytes move on every run even when the picture does not.
 |---|---|---|
 | Fig. 1 — where the window closes | none (drawn from `J`, `thr`, `D+B` only) | `code/fig1.py` |
 | Fig. 2 — the two networks | `outputs/figdata/fig2_sites.csv`, `campus_outline.csv`, `basemap_osm.csv`, `basemap_campus.txt` | `code/fig2.py` |
-| Fig. 3 — one instrument, three weeks | `outputs/figdata/fig3_{block,decomp,surface_day}.csv`, `outputs/p3a_precip_lock_blocks.csv` | `code/fig3.py` |
-| Fig. 4 — dose and response | `outputs/p3a_dose_matrix.csv`, `p3a_dose_response_dual.csv` | `code/fig4.py` |
-| Fig. 5 — blindness and the surface | `outputs/figdata/fig5_{status,trace,surface}.csv` | `code/fig5.py` |
-| Fig. 6 — where the record stops | `outputs/figdata/fig6{a,b,c}_*.csv` | `code/fig6.py` |
-| Figs. 7 and 9 — configurations, and `Omega` against `J` | `outputs/p3a_Omega_config.csv`, `p3a_obs_index.csv`, `p3a_J_segments.csv`, `outputs/tables/table2_roworder.csv` | `code/fig7_fig9.py` |
-| Fig. 8 — the label is a function of one sign | `outputs/p3a_alarm_sign_flip.csv` | `code/fig8.py` |
+| Fig. 3 — what the floor readings are | `outputs/figdata/fig3_{block,decomp,surface_day}.csv`, `outputs/p3a_precip_lock_blocks.csv` | `code/fig3.py` |
+| Fig. 4 — the peak is where the record goes blind | `outputs/figdata/fig5_{status,trace,surface}.csv` | `code/fig5.py` |
+| Fig. 5 — the lower bound is a wall | `outputs/figdata/fig6{a,b,c}_*.csv` | `code/fig6.py` |
+| Fig. 6 and Fig. S2 — the criterion against the archive, and `Omega` against `J` | `outputs/p3a_Omega_config.csv`, `p3a_obs_index.csv`, `p3a_J_segments.csv`, `outputs/tables/table2_roworder.csv` | `code/fig7_fig9.py` |
+| Fig. 7 — the label is a function of one sign | `outputs/p3a_alarm_sign_flip.csv` | `code/fig8.py` |
+| Fig. S1 — dose and response | `outputs/p3a_dose_matrix.csv`, `p3a_dose_response_dual.csv` | `code/fig4.py` |
 | Table 1 — well-depth segments | `outputs/tables/table1_instruments.csv` | `code/make_tables.py` |
 | Table 2 — threshold configurations | `outputs/tables/table2_configurations.csv` | `code/make_tables.py` |
 | Table 3 — three treatments | `outputs/tables/table3_treatments.csv` | `code/make_tables.py` |
 
 `outputs/tables/table2_roworder.csv` is the single source of the row order used
-by Tables 2 and 3 and by Fig. 7. Renaming it or dropping a column stops
+by Tables 2 and 3 and by Figs. 6 and S2. Renaming it or dropping a column stops
 `fig7_fig9.py` on an assertion rather than producing a figure whose rows no
 longer match the table — a failure that is intended.
 
@@ -97,8 +103,8 @@ Machine-readable citation metadata is in `CITATION.cff`; cite the archived
 version of record:
 
 > Zheng, M., Jiang, S., Liu, C., and Zhang, K. (2026). *Derived tables and code
-> for "Where in-sewer level records stop decides whether surcharge duration can
-> be estimated"*, v1.0.0. Zenodo.
+> for "Setting the surcharge criterion below the sensor's near field: a design
+> rule for in-sewer monitoring"*, v1.0.0. Zenodo.
 > https://doi.org/10.5281/zenodo.23683482
 
 The badge above carries the concept DOI (`10.5281/zenodo.23683481`), which always

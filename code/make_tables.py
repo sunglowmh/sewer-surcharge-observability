@@ -177,6 +177,24 @@ def main():
     # J = 0.70 m at the Ocean Building is retained but flagged: it is physically
     # impossible (a reading of 1.34 m exceeds J) and is excluded from phi and h*.
     cad = sites[sites.kind == "sewer"].set_index("dev")["dt_med"]
+    # `J source`: which of the three checks of §4.5 fixes the value of J.
+    #   ii  the dry-well equality (largest burial in the segment == J)
+    #   iii recovered from an alarm whose current value is the floor J - 0.25 m
+    #   i   only the constancy of burial + well
+    # The Main Gate is excluded from ii on purpose: burial holds 0.80 m
+    # throughout, so the equality would only restate the segment (§4.5).
+    bmax = geo.set_index("dev")["b_max"]
+    verd = pd.read_csv(f"{OUT}/p3a_J_verdict.csv", dtype={"dev": str})
+    jfal = verd.dropna(subset=["J_from_alarm"]).set_index("dev")["J_from_alarm"]
+    NO_DRY = {"10"}
+
+    def j_source(p, dev, J):
+        if p not in NO_DRY and abs(float(bmax.loc[dev]) - J) < 1e-9:
+            return "ii"
+        if dev in jfal.index and abs(float(jfal.loc[dev]) - J) < 1e-9:
+            return "iii"
+        return "i"
+
     INVALID = {("05", 0.70)}
     t1 = []
     for _, r in seg[seg.keep].sort_values(["dev", "t0"]).iterrows():
@@ -188,6 +206,7 @@ def main():
             "No.": p + ("\u2020" if bad else ""),
             "Site": PREFIX_EN[p],
             "J (m)": f"{r.J:.2f}",
+            "J source": j_source(p, r.dev, float(r.J)),
             "From": pd.Timestamp(r.t0).strftime("%d %b %Y"),
             "Until": d,
             "_from": pd.Timestamp(r.t0).strftime("%d %b %Y"),
@@ -218,6 +237,12 @@ def main():
     assert abs(ph_v.min() - 9.6) < 0.05 and abs(ph_v.max() - 47.3) < 0.05, (ph_v.min(), ph_v.max())
     # 13 devices + 04, 05(daggers), 11, 12, 08 split = 18 rows
     assert len(t1o) == 18, len(t1o)
+    # `J source`: six dry-well segments over six instruments, three segments
+    # recovered from an alarm, the rest supported only by burial + well.
+    src = t1o["J source"].value_counts().to_dict()
+    assert src == {"i": 9, "ii": 6, "iii": 3}, src
+    assert set(t1o.loc[t1o["J source"] == "ii", "No."].str.rstrip("\u2020")) == {
+        "01", "04", "06", "08", "09", "13"}, "dry-well equality is one segment per instrument"
 
     # ---------- Table 3 ----------
     # r7 rows are in the same order as om; assert that before numbering

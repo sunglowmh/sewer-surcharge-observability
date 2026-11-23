@@ -3,10 +3,11 @@
 
 176 mm double column, Arial 7 pt, vector PDF with embedded TrueType (fonttype 42).
 
-The column width is set from the HESS page, not chosen: page 216 x 283 mm, text
-left edge measured at 19.4 mm on a published article and symmetric, so the type
-area is ~177 mm.  Two earlier versions used 183 mm, which is the *Springer*
-double column and 5-7 mm wider than Copernicus: Fig. 1 came out at 182.1 mm and
+The column width is not chosen: it is the two-column type area of a printed
+journal page.  Measured on a published article the text block is ~177 mm, so the
+figures are drawn to 176 mm and save() refuses anything wider.  An earlier
+version used 183 mm, which is a wider *Springer* double column and 5-7 mm more
+than this job needs: Fig. 1 came out at 182.1 mm and
 Figs. 3/4/5/7/8 at 176.7-178.0 mm, i.e. either over the type area or inside it by
 less than a millimetre.  Production would have scaled them down to fit and taken
 7 pt type to 6.8 pt with it.
@@ -27,12 +28,12 @@ os.makedirs(FIGDIR, exist_ok=True)
 MM = 1 / 25.4
 W1 = 89 * MM
 W15 = 120 * MM
-W2 = 176 * MM        # HESS type area 177 mm, 1 mm rule margin
+W2 = 176 * MM        # two-column type area 177 mm less a 1 mm rule margin
 W2_MAX = 177.0       # mm; save() flags anything wider
 
 # ---------------------------------------------------------------- captions
-# Copernicus: "Figure captions should be included in the text file and not in
-# the figure files."  The explanatory text was originally drawn on the canvas
+# House rule, and the common one: "Figure captions should be included in the
+# text file and not in the figure files."  The explanatory text was originally drawn on the canvas
 # with fig.text(), which put a caption inside every figure file.  It is now
 # behind a switch: the default output is the submission version, with no text
 # on the canvas, and the caption lives in figures/*_captions.md and in the

@@ -1,5 +1,5 @@
 {
-  "title": "Derived tables and code for 'Where in-sewer level records stop decides whether surcharge duration can be estimated'",
+  "title": "Derived tables and code for 'Setting the surcharge criterion below the sensor's near field: a design rule for in-sewer monitoring'",
   "description": "<p>Derived tables and plotting code behind every figure and table of the manuscript. The repository holds the derived quantities (the observability index, the criterion depth, the blindness classification, the duration ratios) and the short level extracts that two figures plot, together with the code that reads them. It does not hold the raw level archive, which remains with the network operator.</p><p>Code under <code>code/</code> is MIT. Data under <code>outputs/</code> is CC BY 4.0.</p>",
   "upload_type": "software",
   "license": {"id": "MIT"},

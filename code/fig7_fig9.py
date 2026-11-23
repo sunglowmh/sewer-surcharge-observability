@@ -26,7 +26,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repository
 OUT = os.path.join(ROOT, "figures")
 os.makedirs(OUT, exist_ok=True)
 MM = 1 / 25.4
-W2 = 176 * MM        # HESS type area 177 mm (see figstyle.py)
+W2 = 176 * MM        # two-column type area 177 mm (see figstyle.py)
 W2_MAX = 177.0
 
 # --------------------------------------------------------------------------- style

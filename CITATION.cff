@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use the derived tables or the code, please cite the archived version of record."
 type: software
-title: "Derived tables and code for 'Where in-sewer level records stop decides whether surcharge duration can be estimated'"
+title: "Derived tables and code for 'Setting the surcharge criterion below the sensor's near field: a design rule for in-sewer monitoring'"
 abstract: >-
   Derived tables and plotting code behind every figure and table of the
   manuscript on the observability of surcharge duration in in-sewer level
