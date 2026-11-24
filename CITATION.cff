@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use the derived tables or the code, please cite the archived version of record."
 type: software
-title: "Derived tables and code for 'Setting the surcharge criterion below the sensor's near field: a design rule for in-sewer monitoring'"
+title: "Derived tables and code for \"Setting the surcharge criterion below the sensor's near field: a design rule for in-sewer monitoring\""
 abstract: >-
   Derived tables and plotting code behind every figure and table of the
   manuscript on the observability of surcharge duration in in-sewer level
@@ -22,14 +22,14 @@ authors:
     affiliation: "Tongji University, Shanghai, China"
 license: MIT
 license-url: "https://github.com/sunglowmh/sewer-surcharge-observability/blob/main/LICENSE"
-doi: "10.5281/zenodo.23683482"
+doi: "10.5281/zenodo.23683481"
 identifiers:
-  - type: doi
-    value: "10.5281/zenodo.23683482"
-    description: "Version of record, v1.0.0"
   - type: doi
     value: "10.5281/zenodo.23683481"
     description: "Concept DOI, always resolves to the newest version"
+  - type: doi
+    value: "10.5281/zenodo.23683482"
+    description: "Version of record, v1.0.0"
 repository-code: "https://github.com/sunglowmh/sewer-surcharge-observability"
 keywords:
   - sewer surcharge
@@ -37,5 +37,5 @@ keywords:
   - censored data
   - observability
   - water-level records
-version: "1.0.0"
-date-released: "2026-10-27"
+version: "1.1.0"
+date-released: "2026-11-24"

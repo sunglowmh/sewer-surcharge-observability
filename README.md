@@ -99,17 +99,17 @@ Code (`code/`) is MIT — see `LICENSE`. Data (`outputs/`) is CC BY 4.0 — see
 `outputs/LICENSE`. The licence covers the derived values, not the underlying
 records. One file is not ours to license: `outputs/figdata/basemap_osm.csv` is
 © OpenStreetMap contributors, ODbL 1.0, and is redistributed under that licence.
-Machine-readable citation metadata is in `CITATION.cff`; cite the archived
-version of record:
+Machine-readable citation metadata is in `CITATION.cff`. The citation below
+gives the concept DOI, which always resolves to the newest version:
 
 > Zheng, M., Jiang, S., Liu, C., and Zhang, K. (2026). *Derived tables and code
 > for "Setting the surcharge criterion below the sensor's near field: a design
-> rule for in-sewer monitoring"*, v1.0.0. Zenodo.
-> https://doi.org/10.5281/zenodo.23683482
+> rule for in-sewer monitoring"*, v1.1.0. Zenodo.
+> https://doi.org/10.5281/zenodo.23683481
 
-The badge above carries the concept DOI (`10.5281/zenodo.23683481`), which always
-resolves to the newest version; the version DOI in the citation points at the
-frozen v1.0.0 archive.
+The badge above carries the same DOI. Each version also has its own DOI on its
+Zenodo record page, and v1.0.0 keeps `10.5281/zenodo.23683482`; cite a version
+DOI when you need to name the snapshot you actually used.
 
 ## Scope
 
