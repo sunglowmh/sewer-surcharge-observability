@@ -36,7 +36,7 @@ RECOMPUTE = ["p3a_obs_index.py"]
 
 NEEDS_ARCHIVE = [
     "prep_figdata.py", "p3a_lock_reclass_rain.py", "p3a_recompute_r6.py",
-    "p3a_onset_lag_baserate.py", "audit_J_registry.py",
+    "p3a_onset_lag_baserate.py", "p3a_rebound_test.py", "audit_J_registry.py",
 ]
 
 CHECKED = [
@@ -46,6 +46,7 @@ CHECKED = [
     "outputs/tables/table2_roworder.csv",
     "outputs/p3a_obs_index.csv",
     "outputs/p3a_obs_index_bydev.csv",
+    "outputs/p3a_rebound_blocks.csv",
 ]
 
 

@@ -4,7 +4,7 @@
   "upload_type": "software",
   "license": {"id": "MIT"},
   "access_right": "open",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "creators": [
     {"name": "Zheng, Maohui", "affiliation": "Tongji University, Shanghai, China"},
     {"name": "Jiang, Simin", "affiliation": "Tongji University, Shanghai, China"},

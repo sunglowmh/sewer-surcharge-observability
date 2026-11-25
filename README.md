@@ -54,6 +54,7 @@ subset, so their bytes move on every run even when the picture does not.
 | Table 1 — well-depth segments | `outputs/tables/table1_instruments.csv` | `code/make_tables.py` |
 | Table 2 — threshold configurations | `outputs/tables/table2_configurations.csv` | `code/make_tables.py` |
 | Table 3 — three treatments | `outputs/tables/table3_treatments.csv` | `code/make_tables.py` |
+| Table S1 — the eighteen blocks and the reading that ends each | `outputs/p3a_rebound_blocks.csv`, `outputs/p3a_precip_lock_blocks.csv` | `code/p3a_rebound_test.py` |
 
 `outputs/tables/table2_roworder.csv` is the single source of the row order used
 by Tables 2 and 3 and by Figs. 6 and S2. Renaming it or dropping a column stops
@@ -68,9 +69,9 @@ longer match the table — a failure that is intended.
 | `fetch_basemap_osm.py` | only with network access | re-downloads the Fig. 2 basemap from OpenStreetMap; the extract is committed, so this is needed to refresh it, not to reproduce the figure |
 | `p3a_obs_index.py` | yes | it recomputes `Omega`, `b_theta` and `Delta_obs` from the shipped `p3a_J_alarm_check.csv` and rewrites `outputs/p3a_obs_index*.csv`; `reproduce_all.py` checks that the rewrite is byte-identical |
 | `prep_figdata.py` | no | rebuilds `outputs/figdata/` from the raw archive; its output is committed, so nothing downstream needs it |
-| `p3a_lock_reclass_rain.py`, `p3a_recompute_r6.py`, `p3a_onset_lag_baserate.py`, `audit_J_registry.py` | no | recompute the quantities the text quotes from the registry exports and the alarm log; those exports stay with the operator. Their results are the `outputs/p3a_*.csv` committed here |
+| `p3a_lock_reclass_rain.py`, `p3a_recompute_r6.py`, `p3a_onset_lag_baserate.py`, `p3a_rebound_test.py`, `audit_J_registry.py` | no | recompute the quantities the text quotes from the registry exports and the alarm log; those exports stay with the operator. Their results are the `outputs/p3a_*.csv` committed here |
 
-Those five are shipped so that they can be read, not run. `code/load_history.py`
+Those six are shipped so that they can be read, not run. `code/load_history.py`
 is the archive loader; with no archive present it stops with a message that says
 so, rather than an `ImportError` from somewhere inside pandas.
 
@@ -104,7 +105,7 @@ gives the concept DOI, which always resolves to the newest version:
 
 > Zheng, M., Jiang, S., Liu, C., and Zhang, K. (2026). *Derived tables and code
 > for "Setting the surcharge criterion below the sensor's near field: a design
-> rule for in-sewer monitoring"*, v1.1.0. Zenodo.
+> rule for in-sewer monitoring"*, v1.2.0. Zenodo.
 > https://doi.org/10.5281/zenodo.23683481
 
 The badge above carries the same DOI. Each version also has its own DOI on its
